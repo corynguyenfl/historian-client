@@ -1,0 +1,28 @@
+[package]
+name = "historian-client"
+version = "0.1.0"
+edition = "2021"
+description = "di-rs is a Rust library for building distributed automation applications."
+rust-version = "1.70"
+license = "Apache-2.0"
+authors = ["Open Energy Solutions, Inc."]
+homepage = "https://github.com/openenergysolutions/historian-client"
+repository = "https://github.com/openenergysolutions/historian-client"
+readme = "README.md"
+keywords = ["openfmb", "interoperability", "di", "renewable-energy", "der"]
+categories = ["distributed-automation"]
+
+[dependencies]
+tokio = { version = "1.0", features = ["full"] }
+prost-types = "0.11"
+prost = "0.11"
+uuid = {version = "1.4", features = ["serde", "v4"]}
+tonic = "0.9"
+chrono = "0.4"
+async-stream = "0.3"
+
+
+[build-dependencies]
+tonic-build = { version = "0.9.2", features = ["prost"] }
+
+
